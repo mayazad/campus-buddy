@@ -28,6 +28,7 @@
         <span>Notes & Pdf</span>
     </a>
     <a href="{{ route('community') }}" class="{{ request()->routeIs('community') ? 'active' : '' }}">
+    {{-- <a href="{{ route('community') }}" class="{{ request()->routeIs('community') ? 'active' : '' }}">
         <img src="{{ asset('assets/includes/menuicons/community.png') }}" alt="Community" width="20" height="20"
             style="vertical-align: middle;">
         <span>Community</span>
@@ -42,6 +43,7 @@
             style="vertical-align: middle;">
         <span>Q Bank</span>
     </a>
+    </a> --}}
 </nav>
 
 <!-- ================= DESKTOP SIDEBAR ================= -->
@@ -79,6 +81,7 @@
         <p>Notes & Pdf</p>
     </a>
     <a href="{{ route('community') }}" class="menu {{ request()->routeIs('community') ? 'active' : '' }}">
+    {{-- <a href="{{ route('community') }}" class="menu {{ request()->routeIs('community') ? 'active' : '' }}">
         <img src="{{ asset('assets/includes/menuicons/community.png') }}" alt="Community" width="20" height="20"
             style="vertical-align: middle;">
         <p>Community</p>
@@ -93,6 +96,7 @@
             style="vertical-align: middle;">
         <p>Q Bank</p>
     </a>
+    </a> --}}
 </nav>
 
 <!-- ================= SOCIAL MEDIA FOOTER ================= -->
