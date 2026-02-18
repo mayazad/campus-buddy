@@ -24,7 +24,7 @@
 
             <!-- HEADER -->
             <div class="community-header">
-                <h1>Community</h1>
+                <h1>Community <!-- Community Section --></h1>
                 <a href="{{ url('create-post.php') }}" class="create-btn">Create Post</a>
             </div>
 
