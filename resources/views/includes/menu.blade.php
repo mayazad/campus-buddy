@@ -27,16 +27,6 @@
             style="vertical-align: middle;">
         <span>Notes & Pdf</span>
     </a>
-    <a href="{{ route('community') }}" class="{{ request()->routeIs('community') ? 'active' : '' }}">
-        <img src="{{ asset('assets/includes/menuicons/community.png') }}" alt="Community" width="20" height="20"
-            style="vertical-align: middle;">
-        <span>Community</span>
-    </a>
-    <a href="{{ url('legacy/Alumni') }}" class="{{ request()->is('legacy/Alumni*') ? 'active' : '' }}">
-        <img src="{{ asset('assets/includes/menuicons/alumni.png') }}" alt="Alumni" width="20" height="20"
-            style="vertical-align: middle;">
-        <span>Alumni</span>
-    </a>
     <a href="{{ route('question-bank') }}" class="{{ request()->routeIs('question-bank') ? 'active' : '' }}">
         <img src="{{ asset('assets/includes/menuicons/questionBank.png') }}" alt="Q Bank" width="20" height="20"
             style="vertical-align: middle;">
@@ -77,16 +67,6 @@
         <img src="{{ asset('assets/includes/menuicons/pdf&Notes.png') }}" alt="Notes & Pdf" width="20" height="20"
             style="vertical-align: middle;">
         <p>Notes & Pdf</p>
-    </a>
-    <a href="{{ route('community') }}" class="menu {{ request()->routeIs('community') ? 'active' : '' }}">
-        <img src="{{ asset('assets/includes/menuicons/community.png') }}" alt="Community" width="20" height="20"
-            style="vertical-align: middle;">
-        <p>Community</p>
-    </a>
-    <a href="{{ url('legacy/Alumni') }}" class="menu {{ request()->is('legacy/Alumni*') ? 'active' : '' }}">
-        <img src="{{ asset('assets/includes/menuicons/alumni.png') }}" alt="Alumni" width="20" height="20"
-            style="vertical-align: middle;">
-        <p>Alumni</p>
     </a>
     <a href="{{ route('question-bank') }}" class="menu {{ request()->routeIs('question-bank') ? 'active' : '' }}">
         <img src="{{ asset('assets/includes/menuicons/questionBank.png') }}" alt="Q Bank" width="20" height="20"
