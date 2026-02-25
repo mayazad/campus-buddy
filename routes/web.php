@@ -6,11 +6,9 @@ use App\Http\Controllers\QuestionBankController;
 
 
 
-// Signup
-use App\Http\Controllers\SignupController;
-Route::get('/signup', [SignupController::class, 'index'])->name('signup');
-Route::post('/signup', [SignupController::class, 'store'])->name('signup.post');
-
+// Auth routes
+Route::get('/signup', [\App\Http\Controllers\Auth\SignupController::class, 'showRegistrationForm'])->name('signup');
+Route::post('/signup', [\App\Http\Controllers\Auth\SignupController::class, 'register']);
 
 
 
