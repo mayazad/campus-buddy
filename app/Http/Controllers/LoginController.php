@@ -16,35 +16,33 @@ class LoginController extends Controller
     public function authenticate(Request $request)
     {
         $request->validate([
-            'login' => 'required',
+            'login'    => 'required',
             'password' => 'required',
         ]);
 
-        $login = $request->input('login');
+        $login    = $request->input('login');
         $password = $request->input('password');
 
-        // Check against users table for either email or student_id
-        $user = DB::table('users')
-                    ->where(function($query) use ($login) {
+        // Check user_db → users table for email or student_id
+        $user = DB::connection('user_db')->table('users')
+                    ->where(function ($query) use ($login) {
                         $query->where('email', $login)
                               ->orWhere('student_id', $login);
                     })
                     ->first();
 
-        if ($user && Hash::check($password, $user->password)) { 
+        if ($user && Hash::check($password, $user->password)) {
             session([
                 'user' => [
-                    'id' => $user->id,
+                    'id'        => $user->id,
                     'full_name' => $user->name,
-                    'email' => $user->email,
-                    'user_type' => $user->user_type, // Changed from role to user_type
+                    'email'     => $user->email,
+                    'user_type' => $user->user_type,
                 ]
             ]);
 
             return redirect()->route('dashboard');
         }
-
-
 
         return back()->withErrors(['login' => 'Check your email/Id/Password to log in'])->withInput();
     }
@@ -55,6 +53,4 @@ class LoginController extends Controller
         session()->flush();
         return redirect()->route('login');
     }
-
-
 }
