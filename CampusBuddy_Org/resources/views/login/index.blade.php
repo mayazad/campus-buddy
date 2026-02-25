@@ -60,7 +60,7 @@
                 <button type="submit" class="btn btn--primary">Sign In</button>
 
                 <div class="links">
-                    <a class="link" href="{{ url('forgot-password') }}">Forgot Password?</a>
+                    <a class="link" href="{{ route('forgot-password') }}">Forgot Password?</a>
                 </div>
             </form>
 
@@ -74,7 +74,7 @@
 
             <p class="signup">
                 Don’t have an account?
-                <a class="link link--strong" href="{{ route('signup') }}">Sign Up</a>
+                <a class="link link--strong" href="#">Sign Up</a>
             </p>
         </section>
     </main>
