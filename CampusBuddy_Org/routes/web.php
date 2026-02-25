@@ -1,13 +1,13 @@
-<?php
-
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ForgotPasswordController;
 
 Route::get('/', function () {
-    return redirect('/login');
+return redirect('/login');
 });
+
 
 // Login
 Route::get('/login', [LoginController::class, 'index'])->name('login');
@@ -24,6 +24,9 @@ Route::post('/reset-password', [ForgotPasswordController::class, 'resetPassword'
 
 // Dashboard
 Route::get('/Dashboard1', function () {
-    return redirect('/dashboard');
+return redirect('/dashboard');
 }); // Redirect legacy
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+// Community
+Route::get('/comunity', [CommunityController::class, 'index'])->name('community');
